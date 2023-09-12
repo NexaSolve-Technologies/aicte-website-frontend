@@ -15,11 +15,11 @@ const NavBar = () => {
            <AppBar position="static" >
            <Toolbar>
                 <Typography variant="h6" className="title">
-                    <img src="src/assets/images/aicte_logo.png" alt="" />  
+                <div className="logo"></div>
 
                 </Typography> 
-                <Button color="inherit" onClick={handleLoginClick}>Login</Button>
-                <Button color="inherit">SignUp</Button>
+                <Button  color="inherit" onClick={handleLoginClick}>Login</Button>
+                <Button  color="inherit">SignUp</Button>
             </Toolbar> 
             </AppBar> 
         </div>

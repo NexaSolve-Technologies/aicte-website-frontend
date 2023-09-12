@@ -1,10 +1,9 @@
 import React from "react";
+import './BackgroundImage.css';
 
 const BackgroundImage = () => {
     return (
-        <div className="BackgroundImage">
-        <h1>BackgroundImage</h1>
-        </div>
+        <div className="BackgroundImage"></div>
     );
 };
 export default BackgroundImage;
