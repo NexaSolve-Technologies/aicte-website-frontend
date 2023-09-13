@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 import React from "react";
 
 const RecentTemplates = () =>{
     const StyleConte ={
-        // csss here
+        // css here
     };
     return (
         <Box sx={StyleConte}>
