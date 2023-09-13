@@ -4,7 +4,6 @@ import { Container } from "@mui/material";
 import Navbar from "./NavBar/Navbar";
 import LoginForm from "./LoginForm/LoginForm";
 import './LoginPage.css'
-import BackgroundImage from "./BackgroundImage/BackgroundImage";
 
 const LoginPage = () => {
    
