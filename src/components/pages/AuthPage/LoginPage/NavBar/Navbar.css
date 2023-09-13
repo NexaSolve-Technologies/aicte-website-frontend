@@ -11,7 +11,7 @@
     background-color: white;  /* Set the AppBar background to white */
   }
 
-.logo{
-  background-image: url(../../../../../assets/images/aicte_logo.png)
-}
+  .logo {
+    background-image: url(../../../../../assets/images/aicte_logo.png);
+  }
   

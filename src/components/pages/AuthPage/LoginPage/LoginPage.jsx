@@ -4,17 +4,20 @@ import { Container } from "@mui/material";
 import Navbar from "./NavBar/Navbar";
 import LoginForm from "./LoginForm/LoginForm";
 import './LoginPage.css'
+import BackgroundImage from "./BackgroundImage/BackgroundImage";
 
 const LoginPage = () => {
    
     return (
-       <div>
+       <div className="FullPage">
           <div className="Navbar">
             <Navbar />
          </div>
-          <div className="login-container">
-            <LoginForm />
-         </div>
+          <div className="BackGround">
+            <div className="loginForm-Container">
+               <LoginForm />
+            </div>
+         </div> 
        </div> 
     );
 }

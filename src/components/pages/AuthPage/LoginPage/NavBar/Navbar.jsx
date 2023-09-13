@@ -9,7 +9,7 @@ const Navbar = () => {
            <AppBar position="static" className="AppBar" style={{backgroundColor : 'white'}} >
            <Toolbar>
                 <Typography variant="h6" className="title">
-                    <img src="../../../../../assets/images/aicte_logo.png"/> 
+                    <div className="logo"></div> 
                 </Typography> 
             </Toolbar> 
             </AppBar> 

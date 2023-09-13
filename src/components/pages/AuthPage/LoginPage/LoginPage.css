@@ -1,14 +1,23 @@
+
 .Navbar{
-    position: fixed;  /* Fixes the position */
-  top: 0;  /* Stick to the top */
-  left: 0;  /* Stick to the left */
-  width: 100%;  /* Full width */
-  z-index: 1000;
+  position: fixed;  /* Fixes the position */
+top: 0;  /* Stick to the top */
+left: 0;  /* Stick to the left */
+width: 100%;  /* Full width */
+z-index: 1000;
 }
-.login-container {
-    display: flex;
-    justify-content: center; /* horizontally center */
-    align-items: center; /* vertically center */
-    height: 100vh; /* 100% of the viewport height */
-    background-color: #f0f0f0; /* light gray background */
+.BackGround {
+  position: relative;
+  background-image: url(../../../../assets/images/SignupPageBG.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+ 
+.loginForm-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   height: 100vh; /* 100% of the viewport height */
   } 
