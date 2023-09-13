@@ -6,7 +6,9 @@ import '../HomePage/HomePage.css';
 const HomePage = () => {
     return (
         <div className="HomePage" style={{ font: "large"}}>
-        <NavBar />
+        <div className="NavBar">
+            <NavBar />
+        </div>
         <BackgroundImage />
         </div>
     );

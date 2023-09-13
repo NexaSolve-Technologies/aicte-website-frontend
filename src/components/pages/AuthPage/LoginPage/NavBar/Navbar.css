@@ -1,0 +1,17 @@
+.root {
+    flex-grow: 1;
+  }
+  
+  .title {
+    flex-grow: 1;
+    color: black;  /* Set the font color to black */
+  }
+  
+  .AppBar {
+    background-color: white;  /* Set the AppBar background to white */
+  }
+
+  .logo {
+    background-image: url(../../../../../assets/images/aicte_logo.png);
+  }
+  
