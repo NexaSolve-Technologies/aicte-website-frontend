@@ -1,9 +1,19 @@
 import React from "react";
+import Navbar from "./Navbar/Navbar";
+import SignupForm from "./SignupForm/SignupForm";
+
 
 const SignupPage = () => {
     return (
-        <div className="SignupPage">
-        <h1>Signup Page</h1>
+        <div>
+            <div className="Navbar">
+                <Navbar />
+            </div>
+            <div className="BackGround">
+                <div className="signup-container">
+                    <SignupForm />
+                </div>
+            </div>
         </div>
     );
 };
