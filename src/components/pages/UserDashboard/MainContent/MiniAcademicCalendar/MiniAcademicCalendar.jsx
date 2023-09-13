@@ -16,7 +16,7 @@ const MiniCalender = () => {
 
     const currentMonth = currentDate.toLocaleString('default', {month:'long'});
     const currentDay = currentDate.getDate();
-    const dayInMonth=30;
+    const daysInMonth=30;
     const daysArray =Array.from({length: daysInMonth},(_, i)=>i+1);
     return (
         <div className="mini-calendar">
