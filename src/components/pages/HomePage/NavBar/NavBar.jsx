@@ -9,6 +9,10 @@ const NavBar = () => {
     const handleLoginClick = () => {
         navigate('/login');
     }
+
+    const handleSignupClick = () => {
+        navigate('/signup');
+    }
     
         return (
         <div className="root">
@@ -16,10 +20,9 @@ const NavBar = () => {
            <Toolbar>
                 <Typography variant="h6" className="title">
                 <div className="logo"></div>
-
                 </Typography> 
                 <Button  color="inherit" onClick={handleLoginClick}>Login</Button>
-                <Button  color="inherit">SignUp</Button>
+                <Button  color="inherit" onClick={handleSignupClick}>SignUp</Button>
             </Toolbar> 
             </AppBar> 
         </div>

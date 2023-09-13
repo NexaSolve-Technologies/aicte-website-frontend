@@ -5,7 +5,9 @@ import BackgroundImage from "./BackgroundImage/BackgroundImage";
 const HomePage = () => {
     return (
         <div className="HomePage" style={{ font: "large"}}>
-        <NavBar />
+        <div className="NavBar">
+            <NavBar />
+        </div>
         <BackgroundImage />
         </div>
     );

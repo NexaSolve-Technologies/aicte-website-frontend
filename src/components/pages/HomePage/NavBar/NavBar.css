@@ -1,18 +1,16 @@
 .root {
     flex-grow: 1;
+
   }
   
   .title {
     flex-grow: 1;
   }
-.logo{
-  background-image: url(./aicte_logo.png);
-  
-  height: 100px;
-  width: 400px;
-  margin-right: 0;
-  background-size:auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-  
+
+  .logo {
+    height: 100px;
+    width: 500px;
+    background-image: url('./aicte_logo.png');
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }
