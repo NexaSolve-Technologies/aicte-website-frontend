@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar/NavBar";
 import BackgroundImage from "./BackgroundImage/BackgroundImage";
+import '../HomePage/HomePage.css';
 
 const HomePage = () => {
     return (
