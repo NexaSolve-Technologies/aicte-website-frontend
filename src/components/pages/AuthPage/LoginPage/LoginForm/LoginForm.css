@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* horizontally center the form fields and button */
+    justify-content: center; /* vertically center the form fields and button */
+    padding: 2em; /* Adds padding to the form */
+    background-color: white; /* Sets background color to white */
+    border-radius: 18px; /* Rounds the corners of the form container */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: fit-content;
+  }
+   
