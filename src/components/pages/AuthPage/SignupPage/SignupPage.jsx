@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar";
 import SignupForm from "./SignupForm/SignupForm";
+import './SignupPage.css';
 
 
 const SignupPage = () => {
