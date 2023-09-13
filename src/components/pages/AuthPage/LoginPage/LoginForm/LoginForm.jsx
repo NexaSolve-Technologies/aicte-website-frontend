@@ -1,9 +1,14 @@
 import React from "react";
 import { TextField, Button, Container, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './LoginForm.css'
 
 const LoginForm = () => {
+    const Navigate = useNavigate();
+    const handleClick = () => {
+        Navigate('/userDashboard')
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         // Logic
@@ -33,7 +38,7 @@ const LoginForm = () => {
                 margin="normal"
                 required
             />
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary" onClick={handleClick}>
                 Login
             </Button>
         </form>
