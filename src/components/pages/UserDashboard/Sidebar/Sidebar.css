@@ -1,10 +1,45 @@
 .sidebar-container {
-    width: 350px;
-    height: 100vh;
-    background-color: lightgray;
-    color: black;
-    position: fixed;
-    top: 20;
-    left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-container .MuiList-root {
+  padding: 0;
+}
+
+.sidebar-container .MuiListItem-root {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar-container .MuiListItem-root:hover {
+  background-color: #34495e;
+}
+
+.sidebar-container .MuiListItemIcon-root {
+  min-width: 40px;
+  color: white;
+}
+
+.sidebar-container .MuiListItemText-root {
+  margin: 0;
+}
+
+.sidebar-container .MuiSvgIcon-root {
+  font-size: 1.5rem;
+}
+
+.sidebar-downpart{
+  margin-top: auto;
+  width: 100%;
   }
-  

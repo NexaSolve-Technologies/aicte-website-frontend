@@ -1,50 +1,34 @@
 import React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import SettingsIcon from '@mui/icons-material/Settings';
-import MessageIcon from '@mui/icons-material/Message';
-import LogoutIcon from '@mui/icons-material/Logout';
-import PersonIcon from '@mui/icons-material/Person';
+import Profile from './Profile/Profile'
+import Message from './Message/Message'
+import CurriculumDesigner from './CurriculumDesigner/CurriculumDesigner'
+import RecentTemplates from './RecentTemplates/RecentTemplates'
+import ResourceRepositery from './ResourceRepositery/ResourceRepositery'
+import ConductMeet from './ConductMeet/ConductMeet'
+import Settings from './Settings/Settings'
+import Logout from './Logout/Logout'
+import './Sidebar.css'
 // ... Add more icons based on your other components
 
 const SideBar = () => {
   return (
+    <div className='sidebar-container'>
     <List>
-      <ListItem button>
-        <ListItemIcon>
-          <VideoCallIcon />
-        </ListItemIcon>
-        <ListItemText primary="Conduct Meet" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SettingsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Settings" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <MessageIcon />
-        </ListItemIcon>
-        <ListItemText primary="Message" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <PersonIcon />
-        </ListItemIcon>
-        <ListItemText primary="Profile" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <LogoutIcon />
-        </ListItemIcon>
-        <ListItemText primary="Logout" />
-      </ListItem>
+      <Profile />
+      <Message />
+      <CurriculumDesigner />
+      <RecentTemplates />
+      <ResourceRepositery />
+      <ConductMeet />
+      <div className='sidebar-downpart'>
+      <Settings />
+      <Logout />
+      </div>
       {/* Add more ListItems here */}
+      
     </List>
+    </div>
   );
 };
 
