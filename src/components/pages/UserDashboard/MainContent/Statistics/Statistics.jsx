@@ -1,5 +1,6 @@
 import React from "react";
 import {Paper,Typography} from "@mui/material";
+import './Statistics.css';
 const Statistics = () =>{
     const StyleConte = {
         // csss here
@@ -7,32 +8,39 @@ const Statistics = () =>{
 
     const DataStats = [
         {
-            label: "student", value :"5000"
+            label: "student",
+            value :"5000"
         },
         {
-            label: "courses", value :"5000"
+            label: "courses",
+            value :"5000"
         },
         {
-            label: "assignments", value :"5000"
+            label: "assignments",
+            value :"5000"
         },
         // {
         //     label: "quizzes", value :"5000"
         // },
         {
-            label: "exams", value :"5000"
+            label: "exams",
+            value :"5000"
         },
         {
-            label: "submissions", value :"5000"
+            label: "submissions",
+            value :"5000"
         },
         {
-            label: "teachers", value :"5000"
+            label: "teachers",
+            value :"5000"
         },
         {
-            label: "admins", value :"5000"
+            label: "admins",
+            value :"5000"
         },
     ];
     return(
-        <Paper sx ={StyleConte} elevation={3}>
+        <Paper className="Statistics" sx ={StyleConte} elevation={3}>
             <Typography variant="h6">
                 Statistics
             </Typography>
