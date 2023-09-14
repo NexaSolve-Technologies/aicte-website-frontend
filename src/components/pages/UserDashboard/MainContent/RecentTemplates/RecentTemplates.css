@@ -1,34 +1,23 @@
 .container {
-    padding: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .templateBox {
-    padding: 16px;
-    background-color: #f50057;
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-    margin: 8px;
-  }
-  
-  .inputContainer {
-    margin-top: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .inputField {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .addButton {
-    margin-left: 8px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.templateBox {
+  width: calc(50% - 8px);
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.addTemplateButton {
+  width: calc(50% - 8px);
+  padding: 16px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}

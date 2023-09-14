@@ -1,54 +1,30 @@
-import { Box,Typography ,Button ,Grid ,Paper} from "@mui/material";
-import React,{useState} from "react";
-import "./RecentTemplates.css";
+import {Typography } from "@mui/material";
+import React, { useState } from "react";
+import styles from "./RecentTemplates.module.css";
 
-const useStyles = makeStyles((theme) => ({
-}));
+const RecentTemplates = () => {
+  const [templates, setTemplates] = useState([]);
+  const [newTemplate, setNewTemplate] = useState('');
 
-const RecentTemplates = () =>{
-    const classes = useStyles();
-    const [templates, setTemplates] = useState([]);
-    const [newTemplate, setNewTemplate] = useState("");
-    
-    const handleAddTemplate = () => {
-        if (newTemplate) {
-          setTemplates([...templates, newTemplate]);
-          setNewTemplate("");
-        }
-    };
+  const addTemplate = () => {
+    if (newTemplate) {
+      setTemplates([...templates, newTemplate]);
+      setNewTemplate('');
+    }
+  };
 
-    
-    return (
-        <Box className={classes.container}>
-      <Typography variant="h5">Recent Templates</Typography>
-      <Box>
-        <Grid container spacing={2}>
-          {templates.map((template, index) => (
-            <Grid item xs={6} sm={3} key={index}>
-              <Paper className={classes.templateBox}>{template}</Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-      <Box className="inputContainer">
-        <input
-          type="text"
-          className="inputField"
-          placeholder="Enter template text"
-          value={newTemplate}
-          onChange={(e) => setNewTemplate(e.target.value)}
-        />
-        <Button
-          variant="contained"
-          color="secondary"
-          className="addButton"
-          onClick={handleAddTemplate}
-        >
-          Add Template
-        </Button>
-      </Box>
-    </Box>
-    );
+  return (
+    <div className={styles.container}>
+      {templates.map((template, index) => (
+        <div key={index} className={styles.templateBox}>
+          <Typography>{template}</Typography>
+        </div>
+      ))}
+      <div className={styles.addTemplateButton} onClick={addTemplate}>
+        <Typography>Add Template</Typography>
+      </div>
+    </div>
+  );
 };
 
 export default RecentTemplates;
