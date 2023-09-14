@@ -7,10 +7,9 @@ const UserDashboard = () => {
     return (
         <div>
             <DashNavbar />
-            {/* <MainContent /> */}
+            <MainContent />
             <Sidebar />
-            
-        </div>
+        </div>  
     )
 }
 
