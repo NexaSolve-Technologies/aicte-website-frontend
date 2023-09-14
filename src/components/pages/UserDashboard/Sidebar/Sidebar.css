@@ -1,0 +1,10 @@
+.sidebar-container {
+    width: 350px;
+    height: 100vh;
+    background-color: lightgray;
+    color: black;
+    position: fixed;
+    top: 20;
+    left: 0;
+  }
+  
