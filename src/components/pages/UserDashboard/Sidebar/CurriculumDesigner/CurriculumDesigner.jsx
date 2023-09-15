@@ -1,11 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import PresentToAllIcon from '@mui/icons-material/PresentToAll';
 
+
+
 const CurriculumDesigner = () => {
+    const Navigate = useNavigate();
+
+    const handleClick = () => {
+        Navigate('/curriculumDesigner') 
+    }
     return (
         <div>
-           <ListItem button >
+           <ListItem button onClick={handleClick}>
                 <ListItemIcon>
                     <PresentToAllIcon />
                 </ListItemIcon>
