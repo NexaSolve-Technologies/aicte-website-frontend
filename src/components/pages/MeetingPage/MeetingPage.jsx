@@ -8,7 +8,6 @@ import {
   VideocamOff,
   Chat,
   ThumbUp,
-//   HandRaise,
   Settings,
   PanTool,
   ScreenShare,
@@ -28,29 +27,33 @@ const MeetingPage = () => {
 
   useEffect(() => {
     const initWebRTC = async () => {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
-        audio: true,
-      });
-      setLocalStream(stream);
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: true,
+        });
+        setLocalStream(stream);
 
-      const newPeer = new SimplePeer({
-        initiator: true,
-        trickle: false,
-        stream,
-      });
-      setPeer(newPeer);
+        const newPeer = new SimplePeer({
+          initiator: true,
+          trickle: false,
+          stream,
+        });
+        setPeer(newPeer);
 
-      newPeer.on("stream", (remoteStream) => {
-        const video = document.createElement("video");
-        video.srcObject = remoteStream;
-        document.querySelector(".video-container").appendChild(video);
-      });
+        newPeer.on("stream", (remoteStream) => {
+          const video = document.createElement("video");
+          video.srcObject = remoteStream;
+          document.querySelector(".video-container").appendChild(video);
+        });
 
-      newPeer.on("signal", (data) => {
-        // Implement signaling logic here
-        // socket.emit("signal", data);
-      });
+        newPeer.on("signal", (data) => {
+          // Implement signaling logic here
+          // socket.emit("signal", data);
+        });
+      } catch (error) {
+        console.error("Error accessing media devices:", error);
+      }
     };
     initWebRTC();
 
