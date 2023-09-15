@@ -1,18 +1,72 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, Grid, Paper, Typography } from "@mui/material";
 import { VideoCall, Mic, MicOff, Videocam, VideocamOff } from "@mui/icons-material";
+import SimplePeer from "simple-peer";
 import "./MeetingPage.css";
 
 const MeetingPage = () => {
     const [micEnabled, setMicEnabled] = useState(true);
     const [videoEnabled, setVideoEnabled] = useState(true);
+    const [localStream, setLocalStream] = useState(null);
+    const [peer, setPeer] = useState(null);
+
+
+    useEffect(() =>{
+        const initWebRTC = async () =>{
+            const stream = await navigator.mediaDevices.getUserMedia({
+                video:true,
+                audio:true,
+            });
+            setLocalStream(stream);
+
+            const newPeer = new SimplePeer({
+                initiator:true,
+                trickle:false,
+                stream,
+            });
+            setPeer(newPeer);
+            // when the peer is connected to other user
+            newPeer.on("stream", (remoteStream)=>{
+                const video = document.createElement("video");
+                video.srcObject = remoteStream;
+                document.querySelector(".video-container").appendChild(video);
+            });
+            newPeer.on("signal", (data) =>{
+                // remote peer ko data bhej
+                // aaise kare socket.emit("signal", data);
+            });
+        };
+        initWebRTC();
+
+        return()=>{
+            if(peer){
+                peer.destroy();
+            }
+            if(localStream){
+                localStream.getTracks().forEach((track) => track.stop());
+            }
+        };
+    }, []);
+
 
     const toggleMic =()=>{
-        setMicEnabled((prev) => !prev);
+        // setMicEnabled((prev) => !prev);
+        if(localStream){
+            localStream.getAudioTracks().forEach((track)=>{
+                track.enabled = !track.enabled;
+            });
+            setMicEnabled(!micEnabled);
+        }
     };
 
     const toggleVideo=()=>{
-        setVideoEnabled((prev) => !prev);
+        // setVideoEnabled((prev) => !prev);
+        if(localStream){
+            localStream.getVideoTracks().forEach((track)=>{
+                track.enabled = !track.enabled;
+            });
+            setVideoEnabled(!videoEnabled);
+        }
     };
 
     return(
