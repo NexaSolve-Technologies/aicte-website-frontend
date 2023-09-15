@@ -1,0 +1,9 @@
+.upperNavbar-container{
+    display: flex;
+    flex-direction: row;
+}
+ .upperNavbar-left{
+    width: 350px;
+    margin-left: 10px;
+    margin-top: 0px;
+ }

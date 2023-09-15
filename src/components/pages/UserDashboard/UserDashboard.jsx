@@ -8,10 +8,9 @@ const UserDashboard = () => {
     return (
         <div>
             <DashNavbar />
-            <MainContent />
             <Sidebar />
             <UserProfile />
-            
+            <MainContent />
         </div>
     )
 }

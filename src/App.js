@@ -5,6 +5,7 @@ import LoginPage from './components/pages/AuthPage/LoginPage/LoginPage';
 import './App.css';
 import SignupPage from './components/pages/AuthPage/SignupPage/SignupPage';
 import UserDashboard from './components/pages/UserDashboard/UserDashboard';
+import CurriculumDesigner from './components/pages/CurriculumDesigner/CurriculumDesigner';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path='/login' element={<LoginPage />} />
       <Route path='/signup' element = {<SignupPage />} />
       <Route path='/userDashboard' element = {<UserDashboard />} />
+      <Route path='/curriculumDesigner' element= {<CurriculumDesigner />} />
     </Routes>
   </Router> 
   );
