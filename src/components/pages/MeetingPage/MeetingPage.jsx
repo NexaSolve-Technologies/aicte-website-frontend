@@ -34,8 +34,11 @@ const MeetingPage = () => {
         });
         setLocalStream(stream);
 
+        // Initialize signaling and set up a connection with peers here
+        // You need to handle offer, answer, and ICE candidate exchange
+
         const newPeer = new SimplePeer({
-          initiator: true,
+          initiator: true, // or false if you are the receiver
           trickle: false,
           stream,
         });
@@ -48,11 +51,13 @@ const MeetingPage = () => {
         });
 
         newPeer.on("signal", (data) => {
-          // Implement signaling logic here
+          // Send signaling data to the other participant
           // socket.emit("signal", data);
         });
+
+        // Handle other events and signaling messages here
       } catch (error) {
-        console.error("Error accessing media devices:", error);
+        console.error("Error accessing media devices or setting up the call:", error);
       }
     };
     initWebRTC();
@@ -62,7 +67,9 @@ const MeetingPage = () => {
         peer.destroy();
       }
       if (localStream) {
-        localStream.getTracks().forEach((track) => track.stop());
+        localStream.getTracks().forEach((track) => {
+          track.stop();
+        });
       }
     };
   }, []);
@@ -85,23 +92,57 @@ const MeetingPage = () => {
     }
   };
 
+  const startCall = async () => {
+    // Implement logic to set up signaling and WebRTC connection
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true,
+      });
+      setLocalStream(stream);
+
+      // Set up signaling connection and exchange offer/answer
+      // ...
+
+      const newPeer = new SimplePeer({
+        initiator: true, // or false if you are the receiver
+        trickle: false,
+        stream,
+      });
+      setPeer(newPeer);
+
+      newPeer.on("stream", (remoteStream) => {
+        const video = document.createElement("video");
+        video.srcObject = remoteStream;
+        document.querySelector(".video-container").appendChild(video);
+      });
+
+      newPeer.on("signal", (data) => {
+        // Send signaling data to the other participant
+        // socket.emit("signal", data);
+      });
+
+      // Handle other events and signaling messages here
+    } catch (error) {
+      console.error("Error accessing media devices or setting up the call:", error);
+    }
+  };
+
   const endCall = () => {
     if (isCallActive) {
-      // Implement logic to end the call when it's active
-      // For example, close the peer connection and cleanup
+      // End the call
       if (peer) {
         peer.destroy();
       }
       if (localStream) {
-        localStream.getTracks().forEach((track) => track.stop());
+        localStream.getTracks().forEach((track) => {
+          track.stop();
+        });
       }
-
       setIsCallActive(false); // Set the call as inactive
     } else {
-      // Implement logic to start the call when it's not active
-      // For example, initialize WebRTC and signaling
-      // ...
-
+      // Start the call
+      startCall();
       setIsCallActive(true); // Set the call as active
     }
   };
