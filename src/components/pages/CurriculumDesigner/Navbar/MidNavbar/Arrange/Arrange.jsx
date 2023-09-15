@@ -14,6 +14,7 @@ const Arrange=()=> {
             <button onClick={toggleOptions} className='arrange-button'>Arrange</button>
             {optionsVisible && (
                 <div className='arrange-options'>
+                    
                 </div>
             )}
         </div>
