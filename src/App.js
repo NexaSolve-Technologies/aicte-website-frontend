@@ -6,6 +6,7 @@ import './App.css';
 import SignupPage from './components/pages/AuthPage/SignupPage/SignupPage';
 import UserDashboard from './components/pages/UserDashboard/UserDashboard';
 import CurriculumDesigner from './components/pages/CurriculumDesigner/CurriculumDesigner';
+import ConductMeet from './components/pages/UserDashboard/Sidebar/ConductMeet/ConductMeet';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <Route path='/signup' element = {<SignupPage />} />
       <Route path='/userDashboard' element = {<UserDashboard />} />
       <Route path='/curriculumDesigner' element= {<CurriculumDesigner />} />
+      <Route path='/meetingPage' element = { < ConductMeet />} />
+
     </Routes>
   </Router> 
   );

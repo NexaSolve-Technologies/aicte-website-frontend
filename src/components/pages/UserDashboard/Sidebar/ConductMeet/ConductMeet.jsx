@@ -1,12 +1,17 @@
 import React from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import VideoCallIcon from '@mui/icons-material/VideoCall';
+import { useNavigate } from "react-router-dom";
 import MeetingPage from "../../../MeetingPage/MeetingPage";
 
 const ConductMeet = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/meetingPage");
+    }
     return (
         <div>
-        <ListItem button>
+        <ListItem button onClick={handleClick}>
             <ListItemIcon>
                 <VideoCallIcon />
             </ListItemIcon>
