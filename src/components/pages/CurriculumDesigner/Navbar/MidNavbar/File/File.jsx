@@ -48,6 +48,6 @@ const File=()=> {
             )}
         </div>
     );
-}
+};
 
 export default File;
