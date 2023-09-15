@@ -12,16 +12,15 @@ const UserDashboard = () => {
             
         <div>
             <Sidebar  />
-            
             <div >
                 <UserProfile />  
-                <MainContent />
-                
+                <MainContent />   
             </div>
-           
         </div>  
         </div>  
-        )
+        
+    )
+
 }
 
 export default UserDashboard;

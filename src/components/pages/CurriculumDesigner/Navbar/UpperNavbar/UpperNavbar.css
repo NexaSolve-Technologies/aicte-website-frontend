@@ -1,0 +1,42 @@
+.upperNavbar-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .upperNavbar-left {
+    flex: 0.45;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .upperNavbar-left input {
+    border: 0cap;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .logo1 {
+    flex: 0.165;
+    display: block;
+    justify-content: center;
+    /* Insert your logo here, for example as a background image */
+    background-image: url(../../../../../assets/images/aicte_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #BBEAFE;
+    border-radius: 30px;
+    width: 10px;
+    height: 50px;
+    margin-right: 150px;
+  }
+  
