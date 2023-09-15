@@ -1,25 +1,27 @@
 import React from "react";
-import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import VideoCallIcon from '@mui/icons-material/VideoCall';
 import { useNavigate } from "react-router-dom";
-import MeetingPage from "../../../MeetingPage/MeetingPage";
+import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import PresentToAllIcon from '@mui/icons-material/PresentToAll';
 
-const ConductMeet = () => {
-    const navigate = useNavigate();
+
+
+const CurriculumDesigner = () => {
+    const Navigate = useNavigate();
+
     const handleClick = () => {
-        navigate("/meetingPage");
+        Navigate('/meetingPage') 
     }
     return (
         <div>
-        <ListItem button onClick={handleClick}>
-            <ListItemIcon>
-                <VideoCallIcon />
-            </ListItemIcon>
-            <ListItemText primary="Conduct Meet" />
-        </ListItem>
+           <ListItem button onClick={handleClick}>
+                <ListItemIcon>
+                    <PresentToAllIcon />
+                </ListItemIcon>
+                <ListItemText primary="Conduct Meet"/>
+            </ListItem>
 
         </div>
-    );
+    )
 }
 
-export default ConductMeet;
+export default CurriculumDesigner;
