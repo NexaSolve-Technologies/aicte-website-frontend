@@ -65,10 +65,6 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 10px 15px; /* Add padding for a more clickable area */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 /* Customize button colors */
