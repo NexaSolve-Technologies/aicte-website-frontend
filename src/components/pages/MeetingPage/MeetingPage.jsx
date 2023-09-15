@@ -25,11 +25,42 @@ const MeetingPage = () => {
                             {/* video conte */}
                             <div className="Video-container">
                                 <video autoPlay muted></video>
+                                {/* yaha dikhega video streams */}
                             </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                            {/* yaha list aayegi pratibhaagiyon ki */}
                         </Grid>
                     </Grid>
                 </Paper>
+                {/* niyantrit ghundi */}
+                <div className="controls">
+                    <Button
+                    variant="contained"
+                    color={micEnabled ? "primary" : "secondary"}
+                    onClick={toggleMic}
+                    startIcon={micEnabled ? <Mic/> : <MicOff/>}
+                    >
+                        {micEnabled ? "Mute" : "Unmute"}
+                    </Button>
+                    <Button
+                    variant="contained"
+                    color={videoEnabled ? "primary" : "secondary"}
+                    onClick={toggleVideo}
+                    startIcon={videoEnabled ? <Videocam/> : <VideocamOff/>}
+                    >
+                        {videoEnabled ? "Stop Video" : "Start Video"}
+                    </Button>
+                    <Button
+                    variant="contained"
+                    color="primary"
+                    startIcon={<VideoCall/>}
+                    >
+                        Join Meeting
+                    </Button>
+                </div>
             </Container>
         </div>
-    )
+    );
 }
+export default MeetingPage;
