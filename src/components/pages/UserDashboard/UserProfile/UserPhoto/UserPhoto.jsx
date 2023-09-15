@@ -4,6 +4,7 @@ import './UserPhoto.css'
 
 
 const UserPhoto = ({photoURL, role}) => { 
+     
     role = "Curriculum Designer";
     return (
         <div className="user-photo-container">

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography, ListItem, ListItemIcon } from "@mui/material";
+import ShareIcon from '@mui/icons-material/Share';
+import CommentIcon from '@mui/icons-material/Comment';
+import DuoIcon from '@mui/icons-material/Duo';
 import './UpperNavbar.css'
 
 const UpperNavbar = ({fileName}) => {
@@ -17,6 +20,23 @@ const UpperNavbar = ({fileName}) => {
                     />
                     </div> 
                 <div className="logo1" />
+                <div className="upperNavbar-right" >
+                    <ListItem button >
+                        <ListItemIcon>
+                            <CommentIcon />
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button >
+                        <ListItemIcon>
+                            <ShareIcon /> 
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button >
+                        <ListItemIcon>
+                            <DuoIcon />
+                        </ListItemIcon>
+                    </ListItem>
+                </div>
                 </Toolbar>
             </AppBar>
         </div>

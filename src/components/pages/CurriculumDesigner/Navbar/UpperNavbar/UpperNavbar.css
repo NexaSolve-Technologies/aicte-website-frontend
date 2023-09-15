@@ -5,18 +5,18 @@
   
   .toolbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
   
   .upperNavbar-left {
-    flex: 0.45;
+    flex: 0.55;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   
   .upperNavbar-left input {
-    border: 0cap;
+    border: none;
     border-radius: 5px;
     background: white;
     color: black;
@@ -26,17 +26,37 @@
   }
   
   .logo1 {
-    flex: 0.165;
-    display: block;
+    flex: 0.19;
+    display: flex;
     justify-content: center;
-    /* Insert your logo here, for example as a background image */
+    align-items: center;
     background-image: url(../../../../../assets/images/aicte_logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #BBEAFE;
     border-radius: 30px;
-    width: 10px;
+    width: 50px;
     height: 50px;
     margin-right: 150px;
+  }
+  
+  .upperNavbar-right {
+    flex: 0.0005;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 0px;
+    gap: 0.1px; /* Spacing between icons */
+  }
+  
+  .upperNavbar-right .MuiListItem-button {
+    min-width: auto; /* Remove min-width */
+    padding: 5px;
+    border-radius: 30px; /* Circular hover effect */
+    transition: background-color 0.3s; /* Optional transition */
+  }
+  
+  .upperNavbar-right .MuiListItem-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Hover color */
   }
   
