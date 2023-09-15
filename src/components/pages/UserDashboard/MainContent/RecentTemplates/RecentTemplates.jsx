@@ -1,6 +1,7 @@
+
 import {Typography } from "@mui/material";
 import React, { useState } from "react";
-import styles from "./RecentTemplates.module.css";
+import styles from "./RecentTemplates.css";
 
 const RecentTemplates = () => {
   const [templates, setTemplates] = useState([]);
