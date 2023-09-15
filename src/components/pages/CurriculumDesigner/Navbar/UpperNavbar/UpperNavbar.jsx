@@ -19,7 +19,10 @@ const UpperNavbar = ({fileName}) => {
                         onChange={(e) => setCurrentFileName(e.target.value)}
                     />
                     </div> 
-                <div className="logo1" />
+                {/* <div className="logo1" /> */}
+                <div className="logo1">
+                    <div className="logoimage"></div>
+                </div>
                 <div className="upperNavbar-right" >
                     <ListItem button >
                         <ListItemIcon>
