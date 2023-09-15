@@ -1,11 +1,22 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import './Tools.css';
 const Tools=()=> {
+    const [optionsVisible, setOptionsVisible] = useState(false);
+
+    const toggleOptions = () => {
+        setOptionsVisible(!optionsVisible);
+    };
+
     return (
-        <div className='Tools-wrap'>
-            
+        <div className='tools-wrap'>
+            <button onClick={toggleOptions} className='tools-button'>Tools</button>
+            {optionsVisible &&(
+                <div className='tools-options'>
+                    
+                </div>
+            )}
         </div>
     );
-}
+};
 
 export default Tools;
