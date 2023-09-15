@@ -1,12 +1,13 @@
 import React from "react";
+import { Box } from '@mui/material';
 import './MidNavbar.css'
 
 const MidNavbar = () => {
     return(
-        <div>
-            <h1>MidNavbar</h1>
-        </div>
-    )
-}
+        <Box>
+            hii, nacho
+        </Box>
+    );
+};
 
-export default MidNavbar
+export default MidNavbar;
