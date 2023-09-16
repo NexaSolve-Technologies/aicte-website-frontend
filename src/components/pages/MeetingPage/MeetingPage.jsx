@@ -187,7 +187,7 @@ const MeetingPage = () => {
 
   return (
     <div className="meet-page">
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Paper elevation={3} style={{ padding: "20px" }}>
           <Grid container spacing={3}>
             <Grid item xs={9}>
