@@ -86,8 +86,8 @@ const CanvasArea = () => {
     <div>
       <canvas
         ref={canvasRef}
-        width={800}
-        height={600}
+        width={1700}
+        height={675}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

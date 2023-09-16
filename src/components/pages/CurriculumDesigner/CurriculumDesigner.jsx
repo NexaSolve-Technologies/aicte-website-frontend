@@ -10,6 +10,7 @@ const CurriculumDesigner = () => {
             <Navbar />
             {/* <Sidebar /> */}
             {/* <CanvasArea /> */}
+            <CanvasArea/>
         </div>
     )
 };
