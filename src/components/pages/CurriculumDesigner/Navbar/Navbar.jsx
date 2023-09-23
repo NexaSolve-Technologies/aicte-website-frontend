@@ -7,7 +7,7 @@ import Content from "./Content/Content"
 const Navbar = () => {
     return(
         <div>
-            {/* <UpperNavbar /> */}
+            <UpperNavbar />
             <MidNavbar />
             <Content />
         </div>

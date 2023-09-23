@@ -7,7 +7,7 @@ const Print=()=>{
     };
 
     return (
-        <button onClick={handlePrintClick}>Print</button>
+        <button className="file-buttons" onClick={handlePrintClick}>Print</button>
     );
 }
 

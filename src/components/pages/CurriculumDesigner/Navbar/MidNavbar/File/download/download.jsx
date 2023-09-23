@@ -35,6 +35,8 @@ const Download=()=>{
                     <button onClick={() => handleDownloadClick('jpg')}>Download JPG</button>
                 </div>
             )};
+            <button className="file-buttons" onClick={toggleDropdown}>Download</button>
+            {/* {showDropdown &&} */}
         </div>
     );
 }

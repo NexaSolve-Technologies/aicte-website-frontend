@@ -7,7 +7,7 @@ const MoveToTrash=()=>{
     };
 
     return(
-        <button onClick={handleMoveTotrashClick}>Move To Trash</button>
+        <button className="file-buttons" onClick={handleMoveTotrashClick}>Move To Trash</button>
     );
 };
 

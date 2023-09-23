@@ -24,7 +24,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
 }
 
 /* Style the paper container for the meeting content */
@@ -34,7 +33,6 @@ body {
   width: 100vh;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Style the video container */
@@ -81,7 +79,8 @@ body {
 }
 
 /* Additional button styles */
-.controls button.minimized {
+.controls
+ button.minimized {
   background-color: #28a745;
   color: white;
 }

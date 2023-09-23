@@ -10,7 +10,7 @@ const VersionHistory=()=>{
 
     return (
         <div className="version-history-button">
-            <button onClick={toggleDropdown}>Version history</button>
+            <button className="file-buttons" onClick={toggleDropdown}>Version history</button>
             {/* {showDropdown &&} */}
         </div>
     );

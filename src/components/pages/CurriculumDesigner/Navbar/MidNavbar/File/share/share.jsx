@@ -6,7 +6,7 @@ const Share=()=>{
     };
 
     return(
-        <button onClick={handleShareClick}>Share</button>
+        <button className="file-buttons" onClick={handleShareClick}>Share</button>
     );
 }
 

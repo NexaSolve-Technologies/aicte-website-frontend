@@ -5,7 +5,7 @@ const PrintPreview=()=>{
         console.log('Print Preview clicked');
     };
     return (
-        <button onClick={handlePrintPreviewClick}>Print Preview</button>
+        <button className="file-buttons" onClick={handlePrintPreviewClick}>Print Preview</button>
     );
 }
 
