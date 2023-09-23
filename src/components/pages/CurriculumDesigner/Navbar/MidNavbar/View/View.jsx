@@ -9,7 +9,7 @@ const View=()=> {
 
     return (
         <div className='view-wrap'>
-            <button onClick={toggleOptions} className='view-button'>View</button>
+            <button  onClick={toggleOptions} className='view-button'>View</button>
             {optionsVisible &&(
                 <div className='view-options'>
                     
