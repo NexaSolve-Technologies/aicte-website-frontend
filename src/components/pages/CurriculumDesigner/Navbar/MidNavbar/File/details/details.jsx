@@ -7,7 +7,7 @@ const Details = () => {
     };
 
     return(
-        <button onClick={handleDetailsClick}>Details</button>
+        <button className="file-buttons" onClick={handleDetailsClick}>Details</button>
     );
 }
 

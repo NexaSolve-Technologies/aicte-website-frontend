@@ -9,7 +9,7 @@ const Download=()=>{
 
     return (
         <div className="download-button">
-            <button onClick={toggleDropdown}>Download</button>
+            <button className="file-buttons" onClick={toggleDropdown}>Download</button>
             {/* {showDropdown &&} */}
         </div>
     );

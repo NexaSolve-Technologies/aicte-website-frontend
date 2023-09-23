@@ -9,7 +9,7 @@ const New=()=>{
 
     return (
         <div className="new-button">
-            <button onClick={toggleDropdown}>New</button>
+            <button className="file-buttons" onClick={toggleDropdown}>New</button>
             {showDropdown && <fromtemplategallery/>}
         </div>
     );

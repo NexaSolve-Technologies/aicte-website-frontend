@@ -6,7 +6,7 @@ const Open =()=>{
     };
 
     return(
-        <button onClick={handleOpenClick}>Open</button>
+        <button className="file-buttons" onClick={handleOpenClick}>Open</button>
     );
 }
 

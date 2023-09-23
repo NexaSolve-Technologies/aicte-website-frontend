@@ -5,7 +5,7 @@ const Rename = () => {
         alert('Rename clicked')
     };
     return(
-        <button onClick={handleRenameClick}>Rename</button>
+        <button className="file-buttons" onClick={handleRenameClick}>Rename</button>
     );
 }
 
