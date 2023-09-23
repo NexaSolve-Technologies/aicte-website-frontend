@@ -5,6 +5,7 @@ const VersionHistory=()=>{
     const [showDropdown, setShowDropdown] = useState(false);
     const toggleDropdown=()=>{
         setShowDropdown(!showDropdown);
+        console.log('version-history button clicked')
     };
 
     return (

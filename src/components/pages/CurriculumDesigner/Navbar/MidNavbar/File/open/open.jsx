@@ -2,7 +2,7 @@ import React from "react";
 
 const Open =()=>{
     const handleOpenClick=()=>{
-        alert('open button clicked');
+        console.log('open button clicked');
     };
 
     return(

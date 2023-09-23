@@ -5,6 +5,7 @@ const Format=()=> {
 
     const toggleOptions = () => {
         setOptionsVisible(!optionsVisible);
+        console.log('format-button clicked')
     };
 
     return (

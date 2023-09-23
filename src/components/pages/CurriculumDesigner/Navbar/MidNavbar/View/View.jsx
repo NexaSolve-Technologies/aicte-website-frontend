@@ -5,6 +5,7 @@ const View=()=> {
 
     const toggleOptions = () => {
         setOptionsVisible(!optionsVisible);
+        console.log('view button clicked')
     };
 
     return (

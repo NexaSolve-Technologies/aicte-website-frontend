@@ -2,7 +2,7 @@ import React from "react";
 
 const Share=()=>{
     const handleShareClick =()=>{
-        alert('Share clicked');
+        console.log('Share clicked');
     };
 
     return(

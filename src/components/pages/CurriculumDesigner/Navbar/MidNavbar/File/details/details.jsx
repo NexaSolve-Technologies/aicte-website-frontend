@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import './details.css';
 
 const Details = () => {
     const handleDetailsClick=()=>{
-        alert('Detail button clicked');
+        console.log('Detail button clicked');
     };
 
     return(

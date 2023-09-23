@@ -5,6 +5,7 @@ const New=()=>{
     const [showDropdown, setShowDropdown] = useState(false);
     const toggleDropdown=()=>{
         setShowDropdown(!showDropdown);
+        console.log('new button clicked');
     };
 
     return (

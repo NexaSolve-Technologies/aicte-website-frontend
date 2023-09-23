@@ -3,7 +3,7 @@ import './movetotrash.css';
 
 const MoveToTrash=()=>{
     const handleMoveTotrashClick=()=>{
-        alert("Move to trash clicked");
+        console.log("Move to trash clicked");
     };
 
     return(

@@ -5,6 +5,7 @@ const Tools=()=> {
 
     const toggleOptions = () => {
         setOptionsVisible(!optionsVisible);
+        console.log('tool button clicked')
     };
 
     return (

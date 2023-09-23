@@ -15,6 +15,7 @@ const File=()=> {
     const [optionsVisible, setOptionsVisible] = useState(false);
 
     const toggleOptions = () => {
+        console.log('file-button-clicked')
         setOptionsVisible(!optionsVisible);
     };
 

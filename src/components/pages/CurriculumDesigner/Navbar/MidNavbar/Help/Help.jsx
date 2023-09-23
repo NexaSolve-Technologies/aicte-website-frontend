@@ -5,6 +5,7 @@ const Help=()=> {
 
     const toggleOptions = () => {
         setOptionsVisible(!optionsVisible);
+        console.log('help-button-clicked')
     };
 
     return (
