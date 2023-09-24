@@ -33,6 +33,10 @@ const Download=()=>{
                     <button onClick={() => handleDownloadClick('docx')}>Download DOC</button>
                     <button onClick={() => handleDownloadClick('png')}>Download PNG</button>
                     <button onClick={() => handleDownloadClick('jpg')}>Download JPG</button>
+                    <button onClick={() => handleDownloadClick('txt')}>Download TXT</button>
+                    <button onClick={()=> handleDownloadClick('csv')}>Download CSV</button>
+                    <button onClick={()=> handleDownloadClick('xlsx')}>Download XLSX</button>
+                    {/* if more formate,add */}
                 </div>
             )};
             {/* <button className="file-buttons" onClick={toggleDropdown}>Download</button> */}
