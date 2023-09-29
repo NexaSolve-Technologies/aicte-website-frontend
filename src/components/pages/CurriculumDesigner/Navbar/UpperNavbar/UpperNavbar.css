@@ -30,14 +30,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../../../../assets/images/aicte_logo.png);
+    /* background-image: url(../../../../../assets/images/aicte_logo.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #BBEAFE;
     border-radius: 30px;
+    color: black;
     width: 50px;
     height: 50px;
     margin-right: 150px;
+
 
   }
   

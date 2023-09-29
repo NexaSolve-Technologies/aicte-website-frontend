@@ -14,7 +14,7 @@
   .logo {
     height: 100px;
     width: 500px;
-    background-image: url(../../../../../assets/images/aicte_logo.png);
+    /* background-image: url(../../../../../assets/images/aicte_logo.png); */
     background-repeat: no-repeat;
     margin-top: 4px;
     margin-bottom: -14px;

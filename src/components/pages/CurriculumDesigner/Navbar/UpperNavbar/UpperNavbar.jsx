@@ -42,7 +42,7 @@ const UpperNavbar = () => {
                     </div> 
                 {/* <div className="logo1" /> */}
                 <div className="logo1">
-                    <div className="logoimage"></div>
+                    <div className="logoimage">LOGO</div>
                 </div>
                 <div className="upperNavbar-right" >
                     <ListItem button >

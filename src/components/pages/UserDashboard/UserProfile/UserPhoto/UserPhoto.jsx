@@ -5,7 +5,7 @@ import './UserPhoto.css'
 
 const UserPhoto = ({photoURL, role}) => { 
      
-    role = "Curriculum Designer";
+    role = "Note maker";
     return (
         <div className="user-photo-container">
             <Avatar alt="User Photo" src={photoURL} sx={{width : 150, height : 150, marginTop : 3}} className="user-avatar" />

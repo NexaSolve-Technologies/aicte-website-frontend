@@ -9,7 +9,6 @@ import ConductMeet from './ConductMeet/ConductMeet'
 import Settings from './Settings/Settings'
 import Logout from './Logout/Logout'
 import './Sidebar.css'
-// ... Add more icons based on your other components
 
 const SideBar = () => {
   return (
@@ -25,8 +24,6 @@ const SideBar = () => {
       <Settings />
       <Logout />
       </div>
-      {/* Add more ListItems here */}
-      
     </List>
     </div>
   );

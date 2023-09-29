@@ -9,7 +9,7 @@ const Navbar = () => {
            <AppBar position="static" className="AppBar" style={{backgroundColor : 'white'}} >
            <Toolbar>
                 <Typography variant="h6" className="title">
-                    <div className="logo"></div> 
+                    <div className="logo">Logo</div> 
                 </Typography> 
             </Toolbar> 
             </AppBar> 

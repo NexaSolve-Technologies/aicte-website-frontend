@@ -17,7 +17,9 @@ const CurriculumDesigner = () => {
                 <ListItemIcon>
                     <PresentToAllIcon />
                 </ListItemIcon>
-                <ListItemText primary="Curriculum Designer"/>
+                {/* <ListItemText primary="Curriculum Designer"/> */}
+                {/** */}
+                <ListItemText primary="Note Maker"/>
             </ListItem>
 
         </div>

@@ -21,45 +21,53 @@ const MeetingPage = () => {
   const [micEnabled, setMicEnabled] = useState(true);
   const [videoEnabled, setVideoEnabled] = useState(true);
   const [localStream, setLocalStream] = useState(null);
+  const [remoteStream, setRemoteStreams] = useState([]);
   const [peer, setPeer] = useState(null);
   const [isMinimized, setMinimized] = useState(false);
   const [isCallActive, setIsCallActive] = useState(false);
 
+  const isSender = true;
+
+
+  const initWebRTC = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true,
+      });
+      setLocalStream(stream);
+
+      const config={
+        trickle:false,
+        stream,
+      };
+
+      const newPeer = isSender
+      ? new SimplePeer({initiator:true,...config})
+      : new SimplePeer({initiator:false,...config});
+      setPeer(newPeer);
+
+      newPeer.on("stream", (remoteStream) => {
+        const video = document.createElement("video");
+        video.srcObject = remoteStream;
+        document.querySelector(".video-container").appendChild(video);
+      });
+      // newPeer.on("stream", (remoteStream) => {
+      //   setRemoteStreams([...remoteStreams, remoteStream]);
+      // });
+
+      newPeer.on("signal", (data) => {
+        // Send signaling data to the other participant
+        // socket.emit("signal", data);
+      });
+
+      // Handle other events and signaling messages here
+    } catch (error) {
+      console.error("Error accessing media devices or setting up the call:", error);
+    }
+  };
+
   useEffect(() => {
-    const initWebRTC = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: true,
-          audio: true,
-        });
-        setLocalStream(stream);
-
-        // Initialize signaling and set up a connection with peers here
-        // You need to handle offer, answer, and ICE candidate exchange
-
-        const newPeer = new SimplePeer({
-          initiator: true, // or false if you are the receiver
-          trickle: false,
-          stream,
-        });
-        setPeer(newPeer);
-
-        newPeer.on("stream", (remoteStream) => {
-          const video = document.createElement("video");
-          video.srcObject = remoteStream;
-          document.querySelector(".video-container").appendChild(video);
-        });
-
-        newPeer.on("signal", (data) => {
-          // Send signaling data to the other participant
-          // socket.emit("signal", data);
-        });
-
-        // Handle other events and signaling messages here
-      } catch (error) {
-        console.error("Error accessing media devices or setting up the call:", error);
-      }
-    };
     initWebRTC();
 
     return () => {
@@ -72,7 +80,7 @@ const MeetingPage = () => {
         });
       }
     };
-  }, []);
+  }, [isSender]);
 
   const toggleMic = () => {
     if (localStream) {
@@ -92,41 +100,41 @@ const MeetingPage = () => {
     }
   };
 
-  const startCall = async () => {
-    // Implement logic to set up signaling and WebRTC connection
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
-        audio: true,
-      });
-      setLocalStream(stream);
+  // const startCall = async () => {
+  //   // Implement logic to set up signaling and WebRTC connection
+  //   try {
+  //     const stream = await navigator.mediaDevices.getUserMedia({
+  //       video: true,
+  //       audio: true,
+  //     });
+  //     setLocalStream(stream);
 
-      // Set up signaling connection and exchange offer/answer
-      // ...
+  //     // Set up signaling connection and exchange offer/answer
+  //     // ...
 
-      const newPeer = new SimplePeer({
-        initiator: true, // or false if you are the receiver
-        trickle: false,
-        stream,
-      });
-      setPeer(newPeer);
+  //     const newPeer = new SimplePeer({
+  //       initiator: true, // or false if you are the receiver
+  //       trickle: false,
+  //       stream,
+  //     });
+  //     setPeer(newPeer);
 
-      newPeer.on("stream", (remoteStream) => {
-        const video = document.createElement("video");
-        video.srcObject = remoteStream;
-        document.querySelector(".video-container").appendChild(video);
-      });
+  //     newPeer.on("stream", (remoteStream) => {
+  //       const video = document.createElement("video");
+  //       video.srcObject = remoteStream;
+  //       document.querySelector(".video-container").appendChild(video);
+  //     });
 
-      newPeer.on("signal", (data) => {
-        // Send signaling data to the other participant
-        // socket.emit("signal", data);
-      });
+  //     newPeer.on("signal", (data) => {
+  //       // Send signaling data to the other participant
+  //       // socket.emit("signal", data);
+  //     });
 
-      // Handle other events and signaling messages here
-    } catch (error) {
-      console.error("Error accessing media devices or setting up the call:", error);
-    }
-  };
+  //     // Handle other events and signaling messages here
+  //   } catch (error) {
+  //     console.error("Error accessing media devices or setting up the call:", error);
+  //   }
+  // };
 
   const endCall = () => {
     if (isCallActive) {
@@ -139,10 +147,11 @@ const MeetingPage = () => {
           track.stop();
         });
       }
+
       setIsCallActive(false); // Set the call as inactive
     } else {
       // Start the call
-      startCall();
+      initWebRTC();
       setIsCallActive(true); // Set the call as active
     }
   };
@@ -160,8 +169,8 @@ const MeetingPage = () => {
   };
 
   const renderMinimizedButton = () => {
-    if (isMinimized) {
-      return (
+    if(isMinimized){
+      return(
         <Button
           variant="contained"
           color="primary"
